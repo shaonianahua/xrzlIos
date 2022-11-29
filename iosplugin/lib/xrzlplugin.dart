@@ -8,7 +8,7 @@ class Xrzlplugin {
 
   static const channel = MethodChannel("netmusic.com/audio_player");
 
-  Future<int> play() async {
+  static Future<int> play() async {
     final result = await channel.invokeMethod("play");
     return result ?? 0;
   }
